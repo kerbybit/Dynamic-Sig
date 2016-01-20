@@ -3,7 +3,7 @@
 	header("Content-Type: image/png");
 	
 	include_once('HypixelPHP.php');
-	$HypixelPHP = new HypixelPHP\HypixelPHP(['api_key' => '6439fd16-90f8-48c4-ba44-9ba594b29177']);
+	$HypixelPHP = new HypixelPHP\HypixelPHP(['api_key' => '########-####-####-####-############']);
 	$username = $_GET['name'];
 	$player = $HypixelPHP->getPlayer(['name' => $username]);
 	$stat = "idk probs lots of stats";
