@@ -100,11 +100,9 @@
 				else {$stat = 'I have the Space Mission quest activated';}
 				break;
 			case 14:
-				$deaths = $player->getStats()->getGameFromID(\HypixelPHP\GameTypes::ARCADE)->get('deaths_throw_out',0);
-				if ($deaths==null) {$deaths=0;}
-				if ($deaths==0) {$stat = 'I have never died in Throw out and I never will';} 
-				elseif ($deaths==1) {$stat = 'I died '.$deaths.' time in throw out';} 
-				else {$stat = 'I died '.$deaths.' times in throw out';}
+				$stamp = $player->getStats()->getGameFromID(\HypixelPHP\GameTypes::ARCADE)->get('stamp_level',0);
+				if ($stamp==null) {$stamp=0;}
+				$stat = "I don't know what 'stamp_level' is, but mine is upgraded to ".$stamp;
 				break;
 			case 15:
 				$repair = $player->getStats()->getGameFromID(\HypixelPHP\GameTypes::BATTLEGROUND)->get('repaired_rare',0);
